@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="sv" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Boklista</title>
+  </head>
+  <body>
+    <h1>Böcker i lager:</h1>
+
+    <ul>
+      <li th:each="book : ${books}">
+        <span th:text="${book.title}"></span> -
+        <span th:text="${book.author}"></span> -
+        <span th:text="${book.genre}"></span>
+      </li>
+    </ul>
+  </body>
+</html>
